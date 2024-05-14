@@ -1,6 +1,8 @@
 name: Issues trigger
 on: issues
 jobs:
-  steps:
-    - name: Output event detail
-      run: echo "${{ toJSON(github.event) }}"
+  output-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output event detail
+        run: echo "${{ toJson(github.event)}}"
