@@ -1,0 +1,6 @@
+name: Issues trigger
+on: issues
+jobs:
+  steps:
+    - name: Output event detail
+      run: echo "${{ toJSON(github.event) }}"
